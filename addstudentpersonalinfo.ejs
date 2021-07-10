@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>BMSCE</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=BTmGm6uVtO66ikl2kNy-o6UdTEOja2o_4-1OwCUiFVNgwjbs1QRRQKYyN-Pa46DSs7d1-7yZSXZy_5TkfsPGV5X3ZJm90A5B1aY147DwFZmJA1R89SrnrC1MTr2H3bSgAbsuvQeCDsAfQvcpjvzPNDs2CzZjEUqBKxcj7SVxYMlTlkGmhtCKjC83syl2udnmEqei0vOPElAPjwIh4nUzmKMgvGVXf_OEe4FBJFSDRW91DbZrup1k_Kcf-MvFyvjzik9D_h-qZRGDDCMSWRqU2ymRpVqcoujmelXNkO07ZdbZHnD9T-NibcVrb8YRygnXcThOOL3U2Sdj1F5iSdWijsXTeXInwpijRZAOK2jS-3FtWjV9Xo91J_89ib57sVj2KStVVt8dndwhRx7HzRpIc05thhfKFT-srrvM-UZ7KXd21IcHoCsU0A6su_HP5PcO_ysKy-wJ_8tJvbONdq5Dfuj3v3C3EifQnZqw3RovO94BMu1TJ88gQP_Er_sv8HQbYp42ot0Mq-ZuksOf4LEjU21GHxqzd0Tkc9xBWm9qxt2MP9yzHIaSnz3dyp0YewRBQICsVL03zNZ_Z_hfDMhCC82ZYtYBDuT2IFFtrwZPHPCUr4fzjsZAgWyoMtm3biy-W4N-VaqpkgOtH0FhBl5l5iSa1APswNEqNUGG8IINhPwqBYNjOm6N07f_Mc_vgoZGEE5T8O2EppdBMM-Kn7egbvD00gpO6zjVCUbnOeH7TZW1s67EpbNz_z_BlaT8an2wMSdE5Qtr7SabHH2RO3PUn5IpoLAWjsOhzGV96opwZ73t9j4PZBdI4oUek7xwbLCuBOYQZp56edxD82v9nPBOrpFySyZ5FOx7Loc9TWDgh2Q4rRMemP9hklTRg9w_0iuroxebT6YYw1LognOBeMHK_Nhe9bW9yZhkKGP_1US92H1gyOtO1Ia-P_g4JROFCiLNk8E5tGokfKeEDiRIfaWYEASsP_GfaYL10kU76CV0U2KMjdX1h19nLeCHselBP2AtqrGbiW8np09mpOA5aCBl1qvUqcA7U9SW8OR3ARyuyoMu_4BiWSTyKO9upmJQgykEs-gf1_cFe-nagCvRUxwpaDfT6R5NVPSIqCS79_vCbbnGOsdyBqE5isN_sKwnOqt1y_dEfdHZKKwhQGjNQN8D3sdBsvOa-nG3Eo-ULoUwK1HUIN7_C7otGJidmNqxLAFWQTVxFfOYwiKf1g8lZhxf1A" nonce="c3cd0538776ac708b30a196ca1fa31c4" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9tYWlsLWF0dGFjaG1lbnQuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2F0dGFjaG1lbnQvdS8wLz91aT0yJmlrPTdkNTMyZWM5ZWImYXR0aWQ9MC4xJnBlcm1tc2dpZD1tc2ctZjoxNzAxNjUwNjMwOTI4OTM5MzM5JnRoPTE3OWQ3YTNiYWM1NmI5NGImdmlldz1hdHQmZGlzcD1zYWZlJnJlYWxhdHRpZD1mX2twaWg1NWltMCZzYWRkYmF0PUFOR2pkSjlRZVA0Q2todm5taXlHcDVLVjhRUXpmWVZVVUlTWWUtekh4STM0VktwcXhDVU5QMzM3MWZ4U1NONzNfaFNsTXR2dUFJS2NBcldiNmdwTF9aem8wVm84ZHpmdTJoeUJjMExmRDVHY1lfVHhTblBFZFJFOFlTc0tMTUZZSUVnZEJ0djhaY2FaZTdZa0xQOGRGaTVPT0UxT3pHS2pOWW1tTWVkZTdHM3hLVUZGR3MtNE9jbmxmZ1cyRHJxSlBlQThpRnlwMm5mVE91bHpjWFdqUGhOMzViR1RTeDZka3V5aFRRSm0ybWhud3JIUW0zVkJDZXRfNDZFalV3S3FVY1ptTWt5TUJ1Q2FNN05wanJYaGFjdkpzMjBINzQzZ3o2dFdmQzMyZXlBN1RyVTBLcW9Ec2ZRekdEeXNPa2ttZjY3Y3hDVkJkd1pLUWxuaXdLOUtaS0ZyUlhvZkk5c1lqTURSak1EenNEaXlrZjFfTm9vaFlPYkljUVZEV2tGZmRYQUtMMENKaFpuMHdQdExHM2lxY0w0UW9tcktfQW1jVzFfeHZjTFhLd1ZpZVpnc2V0Rm9zd1hDU3I2Q0Z5eUxxUWprTmw1REJDOFNQOHFwZmR5cHd4S181OFlxSy1ZSlJHb2M4NlZRM2VQRkFlSmpVeXRYZjBwdGtZUVk3Y0V6UXBZUlJCYXJDT3pMV0JDa1BKNEZWeDdUQ3E0b1FaOTNRX2kxY29KdmhoTXdKSUNnWUtxUmJuMTBLWFpyX0ZldWNzcUljLXpDR29XdWhIeUFHM0lQS3NfQUtrZVRHY1dvbXVBa3dJejlvaFpkdFdJaTJveFVXRklpajhNQzNWTUtfLUhHTE80dmhYSmJpVlB6QUt2VWxEdUEyckxjUWRRZ2g2UUxULWFNMkNkRGgzdVBYSkEyeHEzU1JoMHItbGc"/></head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="" class="nav-link">BMSCE</a>
+      </li>
+      
+    </ul>
+
+
+
+
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="" class="brand-link">
+      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-light">BMSCE</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Student</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item has-treeview menu-open">
+            <a href="/viewnotes" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+               View Info
+             
+              </p>
+            </a>
+         
+          </li>
+          <li class="nav-item">
+            <a href="/viewfeedback" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+              View Feedback
+             
+              </p>
+            </a>
+          </li>
+		             <li class="nav-item">
+            <a href="/addstudentpersonalinfo" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+      Add Personal Info 
+             
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>
+            Logout
+                
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark"> Student Dashboard</h1>
+          </div><!-- /.col -->
+
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+       <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        
+        <!-- /.row -->
+        <!-- Main row -->
+          <div class="card card-default">
+          <div class="card-header">
+            <h3 class="card-title">Add Student Information</h3>
+
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
+              <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-remove"></i></button>
+            </div>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+			  <form action="/addstudentpersonalinfo" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                  <label>Select Department</label>
+                  <select name="department"class="form-control select2" style="width: 100%;">
+                    <option value="null">Select Department</option>	
+                    <option value="MCA1">MCA1</option>	  			  		
+	<option value="MCA2">MCA2</option>	
+<option value="MCA3">MCA3</option>
+
+                  </select>
+                </div>
+                <!-- /.form-group -->
+                <div class="form-group">
+                  <label>Student USN</label>
+                  <input type="text" name="studentid"class="form-control" readonly value="<%= records %>" placeholder="Enter Student USN" required >
+                </div>
+
+                <div class="form-group">
+                  <label>Student Name</label>
+                  <input type="text" name="studentname"class="form-control" readonly value="<%= sn %>" placeholder="Enter Student Name" required >
+                </div>
+                <!-- /.form-group -->
+              </div>
+			  
+              <div class="form-group">
+                <label>Semester</label>
+                <input type="text" name="semester"class="form-control" placeholder="Enter Semester" required >
+              </div>
+              <!-- /.col -->
+             <div class="col-md-6">
+              <div class="form-group">
+                  <label>Phone</label>
+                  <input type="text" name="phonenumber"class="form-control" placeholder="Enter Phone" required >
+                </div>
+                <!-- /.form-group -->
+             <div class="form-group">
+                  <label>Email</label>
+             <input type="text" name="email"class="form-control" placeholder="Enter Email" required >
+                </div>
+                <!-- /.form-group -->
+              </div>
+			  
+			   <div class="col-md-6">
+              <div class="form-group">
+                  <label>DOB</label>
+                  <input type="date" name="DOB"class="form-control"  required >
+                </div>
+
+                <div class="form-group">
+                  <label>Select Gender</label>
+                  <select name="gender" class="form-control select2"  style="width: 100%;">
+                    <option value="Male" selected="selected">Male</option>
+                    <option value="Female" >Female</option>
+                   
+                  </select>
+                </div>
+                <!-- /.form-group -->
+             <div class="form-group">
+                  
+          <div class="form-group">
+                  <label>Enter Address</label>
+             <textarea name="address" class="form-control" >  </textarea >
+                </div>
+                </div>
+                <!-- /.form-group -->
+              </div>
+			  
+			   <div class="col-md-6">
+              <div class="form-group">
+                  <label>10 th Marks</label>
+                  <input type="text" name="tength"class="form-control" placeholder="Enter 10th marks" required >
+                </div>
+                <!-- /.form-group -->
+               <div class="form-group">
+                  <label>12 th Marks</label>
+                  <input type="text" name="twelfth"class="form-control" placeholder="Enter 12th marks" required >
+                </div>
+                <!-- /.form-group -->
+              </div>
+			     
+				 <div class="col-md-6">
+              <div class="form-group">
+                  <label>CGPA</label>
+                  <input type="text" name="cgpa"class="form-control" placeholder="Enter 10th marks" required >
+                </div>
+                <!-- /.form-group -->
+               <div class="form-group">
+                  <label>Resume</label>
+                  <input type="file" name="resume"class="form-control" placeholder="Enter Student Name" required >
+                </div>
+                <!-- /.form-group -->
+              </div>
+			 
+              <div class="form-group">
+                <label>Proctor ID</label>
+                <input type="text" name="proctorid"class="form-control" readonly value="<%= pi %>" placeholder="Enter Proctor Id" required >
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+            <div class="form-group">
+              <label>Proctor Name</label>
+              <input type="text" name="proctorname"class="form-control" readonly value="<%= pn %>" placeholder="Enter Proctor Name" required >
+            </div>
+			  
+          
+              </div>
+			   
+			 
+			   <button type="submit" class="btn btn-block bg-gradient-success ">Send  Information</button>
+			  </form>
+            </div>
+			
+            <!-- /.row -->
+          </div>
+          <!-- /.card-body -->
+          
+        </div>
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+ 
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+</body>
+</html>
